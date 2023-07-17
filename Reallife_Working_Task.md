@@ -4,7 +4,7 @@
 
    # List Merge with Plus
 
-   
+   ```
  $scope.inv_JumboStockIssueDetailList = $scope.inv_JumboStockIssueDetailList.reduce((r, { DepartmentId, IssuedJumboRollQty, IssuedRawMatQty, IssuedRawMatUnitPrice, JumboItemName, JumboWastageInMM, MaterialTypeId, RawItemName, RawItemId, RawItemUnitId, RawRollWidthInMeter, RawRollLenghtInMeter, JumboRollWidthInMeter, 
      JumboRollLenghtInMeter, SubCategoryId }) => {
             var temp = r.find(o => o.RawItemId === RawItemId);
@@ -15,4 +15,5 @@
             }
             return r;
         }, []);
+```
 
