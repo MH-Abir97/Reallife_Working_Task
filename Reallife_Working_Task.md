@@ -74,14 +74,22 @@ $("#SearchTextBox").select2({
         width: 'resolve'
     });
 
+
+
+ 
+
+```
+
 ## List group By
 
-  $scope.ProductionHistoryList = Array.from(
+```
+ $scope.ProductionHistoryList = Array.from(
                 $scope.ProductionHistoryList.reduce((m, o) => m.set(o.ProductionNo, (m.get(o.ProductionNo) || []).concat(o)), new Map),
                 ([ProductionNo, events]) => ({ ProductionNo, events })
             );
 
 ```
+
 
 
 
