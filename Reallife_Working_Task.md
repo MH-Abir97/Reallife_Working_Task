@@ -95,6 +95,7 @@ $("#SearchTextBox").select2({
 
 ## Cascade droupdown list
 
+```
 <!DOCTYPE html>
 <html>
 <head>
@@ -144,7 +145,7 @@ $(document).ready(function(){
 </body>
 </html>
 
-
+```
 
 
 
