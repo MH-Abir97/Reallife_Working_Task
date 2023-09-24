@@ -294,6 +294,55 @@ $(document).ready(function(){
 
 </script>
 ```
+# Large Json Data Provide
+
+```
+ <system.web.extensions>
+        <scripting>
+            <webServices>
+                <jsonSerialization maxJsonLength="5000000" /> <!-- Set to your desired length -->
+            </webServices>
+        </scripting>
+    </system.web.extensions>
+
+ List<Person> data = new List<Person>();
+
+            for (int i = 0; i < 5000000; i++)
+            {
+                var person = new Person
+                {
+                    Name = "John",
+                    Age = 30
+                };
+                data.Add(person);
+            }
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Name", typeof(string));
+            dt.Columns.Add("Age", typeof(int));
+
+            // Populate the DataTable from the List
+            foreach (var person in data)
+            {
+                dt.Rows.Add(person.Name, person.Age);
+            }
+            return LargeJson(dt);
+             
+            //var item = JsonConvert.SerializeObject(dt);
+            //JsonResult result = Json(item);
+            //result.MaxJsonLength = Int32.MaxValue;
+            //result.JsonRequestBehavior = JsonRequestBehavior.AllowGet;
+            //return result;
+
+  ActionResult LargeJson(DataTable dt)
+        {
+            var item = JsonConvert.SerializeObject(dt);
+            JsonResult result = Json(item);
+            result.MaxJsonLength = Int32.MaxValue;
+            result.JsonRequestBehavior = JsonRequestBehavior.AllowGet;
+            return result;
+        }
+
+```
 
 
 
