@@ -344,8 +344,8 @@ $(document).ready(function(){
 
 ```
 
-# Java Script Serilizer
-```
+# Java Script Serilizer Large Json in C#
+```   {
             //... create object if required.
             var rkObj = new { Success = Success, Message = Message, TableData = TableData };
             JavaScriptSerializer rkSerializer = new JavaScriptSerializer() { MaxJsonLength = Int32.MaxValue };
