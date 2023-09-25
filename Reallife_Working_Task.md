@@ -344,6 +344,16 @@ $(document).ready(function(){
 
 ```
 
+# Java Script Serilizer
+```
+            //... create object if required.
+            var rkObj = new { Success = Success, Message = Message, TableData = TableData };
+            JavaScriptSerializer rkSerializer = new JavaScriptSerializer() { MaxJsonLength = Int32.MaxValue };
+            ContentResult rkResult = new ContentResult() { Content = rkSerializer.Serialize(rkObj), ContentType = "application/json" };
+            return rkResult;
+        }
+```
+
 
 
 
