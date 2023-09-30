@@ -353,7 +353,49 @@ $(document).ready(function(){
             return rkResult;
         }
 ```
+# Pagination Section
 
+```
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border:0.5px solid #aaa;
+}
 
+.pagination a.active {
+  background-color: #aaa;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #eee;}
+</style>
+</head>
+<body>
+
+<h2>Pagination</h2>
+
+<div class="pagination">
+  <a href="#">&laquo;</a>
+  <a href="#" class="active">1</a>
+  <a  href="#">2</a>
+  <a href="#">3</a>
+  <a href="#">4</a>
+  <a href="#">5</a>
+  <a href="#">6</a>
+  <a href="#">&raquo;</a>
+</div>
+
+</body>
+</html>
+
+```
 
 
